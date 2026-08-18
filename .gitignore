@@ -1,0 +1,47 @@
+# AI 工作区元数据
+/.agents/
+/.codex/
+
+# Vivado 生成文件
+/.Xil/
+/prj/.Xil/
+/prj/*.xpr
+/prj/*.structure.manifest
+/prj/*.mark_debug.xdc
+/prj/*.ila_debug.xdc
+/prj/*.ila_post.tcl
+/prj/*.cache/
+/prj/*.gen/
+/prj/*.hw/
+/prj/*.incremental/
+/prj/*.ioplanning/
+/prj/*.ip_user_files/
+/prj/*.runs/
+/prj/*.sim/
+/prj/*.srcs/
+/prj/ps7_init*
+/prj/aie_primitive.json
+/prj/.*.bit
+/prj/.*.tmp
+
+# Vitis 工作区保持忽略；根目录发布的 ELF/BIN/manifest 保留给 Git
+/vitis/*
+!/vitis/run.tcl
+!/vitis/program-qspi.ps1
+!/vitis/src/
+!/vitis/src/**
+!/vitis/*.elf
+!/vitis/*.bin
+!/vitis/*.manifest
+
+# bit/XSA/LTX/hardware manifest 和 sd_boot/ 同样保持 Git 可见，
+# 这样检出历史提交后可以直接按 manifest 下载或制作启动介质。
+
+# ILA hardware captures (latest capture is intentionally replaceable)
+/captures/
+
+# 工具日志
+/logs/
+*.jou
+*.log
+*.str
